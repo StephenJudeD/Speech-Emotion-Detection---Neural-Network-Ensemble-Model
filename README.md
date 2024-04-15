@@ -74,7 +74,6 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 * Leverages CNN for feature extraction.
 * Utilizes bidirectional LSTM and GRU layers for capturing information from both past and future contexts.
 * Employs multi-head attention to focus on various aspects of 
-![CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention](./images_ser/model5.png)
 
 
 
