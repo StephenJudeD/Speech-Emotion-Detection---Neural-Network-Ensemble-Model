@@ -27,6 +27,7 @@ This project explores the development of a neural network ensemble model for eff
 * **match_duration() / match_length()**: Makes audio clips a consistent length by repeating or trimming the audio.
 * **add_reverb()**: Simulates reverberation, creating the sense of audio occurring within a space.
 * **stretch()**: Changes the speed of the audio without affecting its pitch.
+![Stretch](./images_ser/waveform_stretch.png)
 * **shift()**: Applies a circular time shift to the audio.
 * **pitch()**: Changes the pitch of the audio without affecting the speed.
 
