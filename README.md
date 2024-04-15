@@ -14,7 +14,7 @@ This project explores the development of a neural network ensemble model for eff
 
 ## Methodology
 
-* **Data Augmentation:**
+**Data Augmentation:**
 * **add_echo()**: Adds an echo effect to the audio, simulating sound reflections.
 * **add_background_noise()**: Mixes in realistic background noise from a provided audio file.
 * **match_duration() / match_length()**: Makes audio clips a consistent length by repeating or trimming the audio.
