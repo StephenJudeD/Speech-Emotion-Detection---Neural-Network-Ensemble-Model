@@ -22,13 +22,14 @@ This project explores the development of a neural network ensemble model for eff
 
 ## Results
 
-* Summarize performance metrics (e.g., accuracy, F1-score) on the datasets used.
+* Summarize performance metrics
+
+
 * Discuss key findings from cross-corpora testing.
 
 ## Process Flow
 
-* **Process Flow Diagram:** https://github.com/StephenJudeD/Speech-Emotion-Detection---Neural-Network-Ensemble-Model/assets/105487389/aa26ac67-48d3-4ebf-aa69-dd009cfcf634
-* Briefly describe the steps illustrated in the process flow diagram
+* **Process Flow Diagram:** ![Process Flow Diagram](https://github.com/StephenJudeD/Speech-Emotion-Detection---Neural-Network-Ensemble-Model/assets/105487389/aa26ac67-48d3-4ebf-aa69-dd009cfcf634)
 
 ## Code Structure
 
