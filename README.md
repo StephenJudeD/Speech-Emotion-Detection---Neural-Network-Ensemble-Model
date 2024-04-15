@@ -4,6 +4,10 @@
 
 This project explores the development of a neural network ensemble model for effective speech emotion detection. Speech emotion detection has important applications in areas such as human-computer interaction, mental health analysis, and customer service.
 
+## Process Flow
+
+* **Process Flow Diagram:** ![Process Flow Diagram](https://github.com/StephenJudeD/Speech-Emotion-Detection---Neural-Network-Ensemble-Model/assets/105487389/aa26ac67-48d3-4ebf-aa69-dd009cfcf634)
+
 ## Datasets
 
 * Ravdess [Sample Audio File](./soundfiles/ravdess.wav)
@@ -85,10 +89,6 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 
 
 * Discuss key findings from cross-corpora testing.
-
-## Process Flow
-
-* **Process Flow Diagram:** ![Process Flow Diagram](https://github.com/StephenJudeD/Speech-Emotion-Detection---Neural-Network-Ensemble-Model/assets/105487389/aa26ac67-48d3-4ebf-aa69-dd009cfcf634)
 
 ## Code Structure
 
