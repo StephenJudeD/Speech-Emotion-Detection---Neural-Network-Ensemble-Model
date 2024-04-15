@@ -56,19 +56,19 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 * Employs a Convolutional Neural Network (CNN) for feature extraction.
 * Includes Long-Short Term Memory (LSTM) and Gated Recurrent Unit (GRU) layers to process sequential data.
 * Incorporates an attention mechanism to focus on the most relevant features.
-![CNN, LSTM, GRU with Attention](./images_ser/model1.png) 
+
 
 **Model 2: CNN Only**
 * Features a streamlined CNN-based architecture for feature extraction.
-![CNN Only](./images_ser/model2.png)
+
 
 **Model 3: CNN and LSTM**
 * Combines CNN feature extraction with an LSTM layer for processing sequences and potentially capturing longer-term dependencies.
-![CNN and LSTM](./images_ser/model3.png)
+
 
 **Model 4: CNN and GRU**
 * Employs CNN for feature extraction, followed by a Gated Recurrent Unit (GRU) layer for sequential processing (an alternative to the LSTM in Model 3).
-![CNN and GRU](./images_ser/model4.png)
+
 
 **Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
 * Leverages CNN for feature extraction.
