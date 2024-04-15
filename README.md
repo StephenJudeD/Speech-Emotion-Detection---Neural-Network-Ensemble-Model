@@ -11,6 +11,9 @@ This project explores the development of a neural network ensemble model for eff
 * SAVEE
 * CREMA D
 * TESS
+![All Datasets](./images_ser/datasets_all.png)
+
+
 
 ## Methodology
 
