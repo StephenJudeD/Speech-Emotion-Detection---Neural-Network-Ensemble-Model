@@ -36,10 +36,35 @@ This project explores the development of a neural network ensemble model for eff
 
 
 **Preprocessing:**
+* **Loading and Resampling:** Loads audio files and resamples them to a consistent sample rate. 
+* **Silence Trimming:** Removes leading and trailing silence from the audio.
+* **Normalization:** Adjusts audio amplitude to a standard range.
 
-**Neural Network Ensemble Architecture:** (Describe the model architecture)
+# Neural Network Ensemble Architecture
 
-**Ensemble Decision Making:** (Explain how decisions are combined)
+This project utilizes an ensemble of neural networks for enhanced performance and robustness. The ensemble includes the following models:
+
+**Model 1: CNN, LSTM, GRU with Attention** 
+* Employs a Convolutional Neural Network (CNN) for feature extraction.
+* Includes Long-Short Term Memory (LSTM) and Gated Recurrent Unit (GRU) layers to process sequential data.
+* Incorporates an attention mechanism to focus on the most relevant features.
+
+**Model 2: CNN Only**
+* Features a streamlined CNN-based architecture for feature extraction.
+
+**Model 3: CNN and LSTM**
+* Combines CNN feature extraction with an LSTM layer for processing sequences and potentially capturing longer-term dependencies.
+
+**Model 4: CNN and GRU**
+* Employs CNN for feature extraction, followed by a Gated Recurrent Unit (GRU) layer for sequential processing (an alternative to the LSTM in Model 3).
+
+**Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
+* Leverages CNN for feature extraction.
+* Utilizes bidirectional LSTM and GRU layers for capturing information from both past and future contexts.
+* Employs multi-head attention to focus on various aspects of 
+
+
+
 
 ## Results
 
