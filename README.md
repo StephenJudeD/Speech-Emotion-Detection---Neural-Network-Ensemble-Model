@@ -24,10 +24,22 @@ This project explores the development of a neural network ensemble model for eff
 * **pitch()**: Changes the pitch of the audio without affecting the speed.
 
 
-* **Feature Extraction:** (List the techniques used)
-* **Preprocessing:** (Outline the steps involved)
-* **Neural Network Ensemble Architecture:** (Describe the model architecture)
-* **Ensemble Decision Making:** (Explain how decisions are combined)
+**Feature Extraction:** 
+* **MFCCs (Mel-Frequency Cepstral Coefficients):** Capture the shape of the vocal tract, commonly used in speech recognition and other audio tasks.
+* **Delta MFCCs:** Measure the changes in MFCCs over time, providing dynamic information.
+* **Acceleration MFCCs:**  Calculate the second-order derivative of MFCCs, emphasizing higher-order spectral changes.
+* **Mel Spectrogram:** A visual representation of the audio's frequency content over time, useful for analyzing various audio patterns.
+* **FRFT (Fractional Fourier Transform):** A generalization of the Fourier transform, it allows extracting features at intermediate points between the time and frequency domains.
+* **Spectral Centroid:**  Indicates where the "center of mass" of the spectrum is located, related to the brightness of the sound.
+
+
+
+
+**Preprocessing:**
+
+**Neural Network Ensemble Architecture:** (Describe the model architecture)
+
+**Ensemble Decision Making:** (Explain how decisions are combined)
 
 ## Results
 
