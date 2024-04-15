@@ -6,7 +6,7 @@ This project explores the development of a neural network ensemble model for eff
 
 ## Process Flow
 
-* **Process Flow Diagram:** ![Process Flow Diagram](https://github.com/StephenJudeD/Speech-Emotion-Detection---Neural-Network-Ensemble-Model/assets/105487389/aa26ac67-48d3-4ebf-aa69-dd009cfcf634)
+* **Process Flow Diagram:** ![Process Flow Diagram](./images_ser/pres_data_flow_ensemble.jpg)
 
 ## Datasets
 
