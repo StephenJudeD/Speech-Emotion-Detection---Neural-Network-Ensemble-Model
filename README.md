@@ -12,10 +12,10 @@ This project explores the development of a neural network ensemble model for eff
 * CREMA D
 * TESS
 
-**All Datasets onces loaded**
+**All Datasets with Emotions**
 ![All Datasets](./images_ser/datasets_all.png)
 
-**Final Balanced Dataset**
+**Final Balanced Dataset with 6 emtions**
 ![All Datasets](./images_ser/final_bar.png)
 
 
