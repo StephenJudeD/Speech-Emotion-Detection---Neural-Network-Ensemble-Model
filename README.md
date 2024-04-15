@@ -6,7 +6,9 @@ This project explores the development of a neural network ensemble model for eff
 
 ## Process Flow
 
-* **Process Flow Diagram:** ![Process Flow Diagram](./images_ser/pres_data_flow_ensemble.jpg)
+* **Process Flow Diagram:**
+
+![Process Flow Diagram](./images_ser/pres_data_flow_ensemble.jpg)
 
 ## Datasets
 
