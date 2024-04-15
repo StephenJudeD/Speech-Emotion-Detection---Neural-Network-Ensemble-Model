@@ -7,10 +7,11 @@ This project explores the development of a neural network ensemble model for eff
 ## Datasets
 
 * Ravdess [Sample Audio File](./soundfiles/ravdess.wav)
-* Ravdess Song
-* SAVEE
-* CREMA D
-* TESS
+* Ravdess Song [Sample Audio File](./soundfiles/rav_song.wav)
+* SAVEE [Sample Audio File](./soundfiles/savee.wav)
+* CREMA D [Sample Audio File](./soundfiles/CremaD.wav)
+* TESS [Sample Audio File](./soundfiles/tess.wav)
+*Disclaimer: Audio files cannot be directly played within the README.Please click the links to download and listen to the sample files.*
 
 **All Datasets with Emotions**
 ![All Datasets](./images_ser/datasets_all.png)
