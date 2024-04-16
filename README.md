@@ -239,11 +239,15 @@ model5 = create_and_compile_model(input_layer, output_layer_5)
 
 ![Stretch](./images_ser/conf2.png)
 
+![Stretch](./images_ser/loss_model2.png)
+
 ---
 
 **Model 3: CNN and LSTM**
 
 ![Stretch](./images_ser/conf3.png)
+
+![Stretch](./images_ser/loss_model3.png)
 
 ---
 
@@ -251,11 +255,15 @@ model5 = create_and_compile_model(input_layer, output_layer_5)
 
 ![Stretch](./images_ser/conf4.png)
 
+![Stretch](./images_ser/loss_model4.png)
+
 ---
 
 **Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
 
 ![Stretch](./images_ser/conf5.png)
+
+![Stretch](./images_ser/loss_model5.png)
 
 
 ## Code Structure
