@@ -12,11 +12,14 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 •	confidence_threshold =0.7
 
 **Trump Radar Chart**
+
 ![Trump Radar Chart](./images_ser/Trump_debate1.png)
 
-**Biden Radar Chart**
-![Biden Radar Chart](./images_ser/biden_debate_1.png)
+---
 
+**Biden Radar Chart**
+
+![Biden Radar Chart](./images_ser/biden_debate_1.png)
 
 Radar charts offer a valuable method for visually representing the emotional content conveyed during debates. They suggest that both Trump and Biden displayed negative emotions, but Trump's disgust was more noticeable. This finding aligns with previous studies on political communication, indicating that voters tend to be influenced more by negative emotions than positive ones.
 
