@@ -46,6 +46,8 @@ Radar charts offer a valuable method for visually representing the emotional con
 **All Datasets with Emotions**
 ![All Datasets](./images_ser/datasets_all.png)
 
+---
+
 **Final Balanced Dataset with 6 emtions**
 ![All Datasets](./images_ser/final_bar.png)
 
