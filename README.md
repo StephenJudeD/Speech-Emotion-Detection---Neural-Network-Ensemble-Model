@@ -101,7 +101,9 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 **Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
 * Leverages CNN for feature extraction.
 * Utilizes bidirectional LSTM and GRU layers for capturing information from both past and future contexts.
-* Employs multi-head attention to focus on various aspects of 
+* Employs multi-head attention to focus on various aspects of audio
+
+## Model Architectures
 
 ```python
 
