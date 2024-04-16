@@ -112,29 +112,7 @@ from tensorflow.keras.layers import (
     GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
     Reshape, Attention, GRU
 )
-from tensorflow.keras.callbacks import (
-    EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
-)
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, MinMaxScaler
-from tensorflow.keras.utils import to_categorical
-from tqdm import tqdm
 
-from tensorflow.keras.layers import (
-    Input, Conv2D, BatchNormalization, Activation, MaxPooling2D,
-    GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
-    Reshape, Attention, GRU
-)
-from tensorflow.keras.callbacks import (
-    EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
-)
-
-
-from tensorflow.keras.layers import (
-    Input, Conv2D, BatchNormalization, Activation, MaxPooling2D,
-    GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
-    Reshape, Attention, GRU
-)
 from tensorflow.keras.callbacks import (
     EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
 )
