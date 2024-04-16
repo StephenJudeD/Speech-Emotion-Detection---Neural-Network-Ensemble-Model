@@ -103,7 +103,7 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 * Utilizes bidirectional LSTM and GRU layers for capturing information from both past and future contexts.
 * Employs multi-head attention to focus on various aspects of audio
 
-## Model Architectures
+## Programmatic Implementation
 
 ```python
 
