@@ -479,6 +479,6 @@ Future enhancements for the SER model include incorporating a diverse range of d
 
 ## Contact
 
-Any quesiotns or comments
+Any questions or comments
 
 * stephenjudedon2@gmail.com
