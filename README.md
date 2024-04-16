@@ -104,11 +104,142 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 * Employs multi-head attention to focus on various aspects of 
 
 ```python
-# Your Python code here
-def hello_world():
-    print("Hello, world!")
-    
-hello_world()
+
+from keras.layers import Flatten
+import tensorflow as tf
+from tensorflow.keras.layers import (
+    Input, Conv2D, BatchNormalization, Activation, MaxPooling2D,
+    GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
+    Reshape, Attention, GRU
+)
+from tensorflow.keras.callbacks import (
+    EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
+)
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from tensorflow.keras.utils import to_categorical
+from tqdm import tqdm
+
+from tensorflow.keras.layers import (
+    Input, Conv2D, BatchNormalization, Activation, MaxPooling2D,
+    GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
+    Reshape, Attention, GRU
+)
+from tensorflow.keras.callbacks import (
+    EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
+)
+
+
+from tensorflow.keras.layers import (
+    Input, Conv2D, BatchNormalization, Activation, MaxPooling2D,
+    GlobalAveragePooling2D, Dense, Dropout, LSTM, Bidirectional,
+    Reshape, Attention, GRU
+)
+from tensorflow.keras.callbacks import (
+    EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, TensorBoard
+)
+
+# Define input layer
+input_layer = Input(shape=(X_train.shape[1], X_train.shape[2], 1))
+
+# Function to create CNN model
+def create_cnn_model(input_layer):
+    conv1 = Conv2D(512, kernel_size=(5, 5), strides=(1, 1), padding='same')(input_layer)
+    bn1 = BatchNormalization()(conv1)
+    relu1 = Activation('relu')(bn1)
+    pool1 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(relu1)
+
+    conv2 = Conv2D(256, kernel_size=(5, 5), dilation_rate=(2, 2), padding='same')(pool1)
+    bn2 = BatchNormalization()(conv2)
+    relu2 = Activation('relu')(bn2)
+    pool2 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(relu2)
+
+    conv3 = Conv2D(128, kernel_size=(3, 3), dilation_rate=(2, 2), padding='same')(pool2)
+    bn3 = BatchNormalization()(conv3)
+    relu3 = Activation('relu')(bn3)
+    pool3 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(relu3)
+
+    conv4 = Conv2D(64, kernel_size=(3, 3), padding='same')(pool3)
+    bn4 = BatchNormalization()(conv4)
+    relu4 = Activation('relu')(bn4)
+    pool4 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(relu4)
+
+    global_avg_pooling = GlobalAveragePooling2D()(pool4)
+    return global_avg_pooling
+
+# Function to create LSTM model
+def create_lstm_model(input_layer):
+    lstm1 = LSTM(256, return_sequences=True)(input_layer)
+    lstm2 = LSTM(128, return_sequences=True)(lstm1)
+    lstm3 = LSTM(64)(lstm2)
+
+    dropout = Dropout(0.3)(lstm3)
+    return dropout
+
+# Function to create model with attention
+def add_attention_layer(layer):
+    attention = Attention()([layer, layer])
+    return attention
+
+# Function to create and compile a model
+def create_and_compile_model(input_layer, output_layer, optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy']):
+    model = tf.keras.Model(inputs=input_layer, outputs=output_layer)
+    model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
+    return model
+
+# Function to create multi-head attention layer
+def create_multi_head_attention(layer, heads=8):
+    attention_heads = []
+    for _ in range(heads):
+        attention_head = Attention()([layer, layer])
+        attention_heads.append(attention_head)
+    merged_attention = tf.keras.layers.Concatenate(axis=-1)(attention_heads)
+    return merged_attention
+
+# Create Model 1: CNN, LSTM, GRU with Attention
+cnn_output = create_cnn_model(input_layer)
+reshape1 = Reshape((1, 64))(cnn_output)  # Adjust the shape to maintain the total size
+bidirectional_lstm = Bidirectional(LSTM(128, return_sequences=True))(reshape1)
+attention_lstm = add_attention_layer(bidirectional_lstm)
+bidirectional_gru = Bidirectional(GRU(64, return_sequences=True))(attention_lstm)
+attention_gru = add_attention_layer(bidirectional_gru)
+attention_flatten = tf.keras.layers.Flatten()(attention_gru)
+output_layer_1 = Dense(units=6, activation='softmax')(attention_flatten)
+model1 = create_and_compile_model(input_layer, output_layer_1)
+
+# Create Model 2: Only CNN
+cnn_output = create_cnn_model(input_layer)
+output_layer_2 = Dense(units=6, activation='softmax')(cnn_output)
+model2 = create_and_compile_model(input_layer, output_layer_2)
+
+# Create Model 3: CNN and LSTM
+cnn_output_3 = create_cnn_model(input_layer)
+reshape_3 = Reshape((4, 16))(cnn_output_3)
+bidirectional_lstm_3 = Bidirectional(LSTM(128, return_sequences=True))(reshape_3)
+attention_lstm_3 = add_attention_layer(bidirectional_lstm_3)
+
+# Flatten the output of attention_lstm_3
+flatten_3 = Flatten()(attention_lstm_3)
+output_layer_3 = Dense(units=6, activation='softmax')(flatten_3)
+model3 = create_and_compile_model(input_layer, output_layer_3)
+
+# Create Model 4: CNN and GRU
+cnn_output_4 = create_cnn_model(input_layer)
+output_layer_4 = Dense(units=6, activation='softmax')(cnn_output_4)
+model4 = create_and_compile_model(input_layer, output_layer_4)
+
+# Create Model 5 with Multi-Head Attention: CNN, Bidirectional LSTM, Bidirectional GRU
+cnn_output_5 = create_cnn_model(input_layer)
+reshape_5 = Reshape((1, 64))(cnn_output_5)  # Adjust the shape to maintain the total size
+bidirectional_lstm_5 = Bidirectional(LSTM(128, return_sequences=True))(reshape_5)
+bidirectional_gru_5 = Bidirectional(GRU(64, return_sequences=True))(bidirectional_lstm_5)
+
+# Apply multi-head attention to the output of Bidirectional GRU
+multi_head_attention_5 = create_multi_head_attention(bidirectional_gru_5, heads=4)
+attention_flatten_5 = tf.keras.layers.Flatten()(multi_head_attention_5)
+output_layer_5 = Dense(units=6, activation='softmax')(attention_flatten_5)
+
+model5 = create_and_compile_model(input_layer, output_layer_5)
 ```
 
 ## Results
