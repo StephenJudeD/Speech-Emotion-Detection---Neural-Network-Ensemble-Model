@@ -222,11 +222,16 @@ output_layer_5 = Dense(units=6, activation='softmax')(attention_flatten_5)
 model5 = create_and_compile_model(input_layer, output_layer_5)
 ```
 
-## Results - Confusions Matrices
+## Results - Confusions Matrix & Loss
+
+* Confusion Matrix: The confusion matrix shows how well the model is classifying each of the six emotions (angry, disgust, fear, happy, neutral, sad). The cells of the matrix represent the number of instances that were classified as a particular true label and a particular predicted label. 
+* Loss Function: loss for both training and validation. The orange line represents training loss, and the blue line represents validation loss. The erratic nature of the loss curves is due to the changing learning rate of the model. As the model learns the weights of the training set, the loss decreases. To prevent overfitting, the learning rate is gradually decreased. 
 
 **Model 1: CNN, LSTM, GRU with Attention** 
 
 ![Stretch](./images_ser/conf1.png)
+
+![Stretch](./images_ser/loss_model1.png)
 
 ---
 
