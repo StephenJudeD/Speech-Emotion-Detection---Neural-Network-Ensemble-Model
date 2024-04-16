@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This project explores the development of a neural network ensemble model for effective speech emotion detection. Speech emotion detection has important applications in areas such as human-computer interaction, mental health analysis, and customer service.
+This project explores the development of a neural network ensemble model for effective speech emotion detection. By utilising diverse datasets, employing advanced feature extraction techniques, and developing robust a machine learning model, SER system capable of identifying and classifying a wide range of emotions has been usccessfully dveloped. The ultimate goal was to develop a Sentiment Emotion Recognition (SER) system for analyzing political discourse. This involved iterative testing until finally applying it to the 1st debate between Trump and Biden.
+
+![Political](./images_ser/pexels-rosemary-ketchum-1464210.jpg)
 
 ## Key Result - 1st Debate Biden & Trump - Final Segment
 
