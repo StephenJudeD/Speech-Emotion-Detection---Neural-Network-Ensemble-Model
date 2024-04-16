@@ -334,10 +334,9 @@ Johnny Cash’s haunting ballad, originally by Nine Inch Nails, transformed into
 
 ## Trump vs The Media 
 
+[![Video](https://img.youtube.com/vi/8AHCfZTRGiI/0.jpg)](https://www.youtube.com/watch?v=xDdTKBphRMs)
 
-
-
-
+![Stretch](./images_ser/trump_vs_media.png)
 
 
 ---
