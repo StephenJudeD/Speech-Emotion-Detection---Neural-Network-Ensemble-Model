@@ -320,12 +320,13 @@ In the next experiment, predictions are made on the surprise emotion only. These
 
 ![Stretch](./images_ser/tess_surprise.png)
 
-
-
-
 ---
   
-## Music
+## Music - Johnny Cash 'Hurt'
+
+Johnny Cash’s haunting ballad, originally by Nine Inch Nails, transformed into an anthem of loss and regret. Despite its melancholy, the song offers self-awareness and acceptance. Happiness is an emotion predicted by the model, outwardly this could be interpreted as incorrect, but if you listen to the songs message of self-awareness and introspection, this can be interpreted as a form of growth. The song acknowledges the inevitability of pain and suffering in life, but it also suggests a quiet acceptance of these realities. In this sense, happiness can be found in the peace surrendering and the absence of denial. Cash released it in 2002, passing away 13 months later
+
+![Stretch](./images_ser/cash_hurt.png)
 
 ---
 
