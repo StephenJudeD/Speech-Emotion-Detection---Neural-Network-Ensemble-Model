@@ -265,8 +265,50 @@ model5 = create_and_compile_model(input_layer, output_layer_5)
 
 ![Stretch](./images_ser/loss_model5.png)
 
+## Ensemble Model - Majority voting
 
-## Code Structure
+```python
+# Function for majority voting
+def majority_vote(predictions):
+    # Convert predictions to an array
+    predictions_array = np.array(predictions)
+
+    # Use np.argmax to find the index with the maximum occurrence
+    majority_index = np.argmax(np.bincount(predictions_array))
+
+    # Return the majority voted class
+    return majority_index
+
+# List to store the loaded models
+ensemble_models = []
+
+# Paths to the ensemble model files
+ensemble_paths = [
+    "/path_to_model/ensemble_full_v1_model1.h5",
+    "/path_to_model/ensemble_full_v1_model2.h5",
+    "/path_to_model/ensemble_full_v1_model3.h5",
+    "/path_to_model/ensemble_full_v1_model4.h5",
+    "/path_to_model/ensemble_full_v1_model5.h5"
+
+]
+
+# Load each model and add it to the ensemble
+for path in ensemble_paths:
+    model = load_model(path)
+    ensemble_models.append(model)
+
+```
+## Testing for Genarlisation
+
+* Cross Corpora
+* Music
+* Trump vs The Media 
+* 1st Debate
+
+
+
+
+
 
 * **ensemble_full_final:** (Explain the purpose of this file)
 * **Predictor_final:** (Describe the functionality of this file)
