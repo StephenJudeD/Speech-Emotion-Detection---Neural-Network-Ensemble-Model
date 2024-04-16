@@ -75,10 +75,84 @@ Radar charts offer a valuable method for visually representing the emotional con
 
 
 
-**Model Preparation:**
+**Load the Audio Data, extract Features, normalize and trim, and add augmentations:**
 * **Loading and Resampling:** Loads audio files and resamples them to a consistent sample rate. 
 * **Silence Trimming:** Removes leading and trailing silence from the audio.
 * **Normalization:** Adjusts audio amplitude to a standard range.
+
+```python
+def get_features(path, background_noise_path, target_sample_rate=16000, target_duration=3.0):
+    try:
+        # Load the audio file with the desired sample rate
+        data, sample_rate = librosa.load(path, sr=target_sample_rate)
+
+        # Trim silence on the entire duration
+        try:
+            trimmed_data, _ = librosa.effects.trim(data)
+        except Exception as trim_error:
+            raise ValueError(f"Error trimming silence for file: {path}. Error details: {str(trim_error)}")
+
+        # Normalize the trimmed audio data
+        normalized_data = normalize_audio(trimmed_data)
+
+        # Ensure the audio is exactly 3 seconds long (truncate or pad)
+        if len(normalized_data) > int(target_duration * target_sample_rate):
+            normalized_data = normalized_data[:int(target_duration * target_sample_rate)]
+        else:
+            # Pad with zeros if the audio is shorter than 3 seconds
+            pad_length = int(target_duration * target_sample_rate) - len(normalized_data)
+            normalized_data = np.pad(normalized_data, (0, pad_length), 'constant')
+
+        # Print the duration
+        duration_seconds = len(normalized_data) / target_sample_rate
+        print(f"Duration of {path}: {duration_seconds} seconds")
+
+        # Initialize a list to store features
+        features_list = []
+
+        # Extract features from the entire normalized audio
+        try:
+            res1 = extract_features(normalized_data, sample_rate)
+            features_list.append(res1)
+        except Exception as feature_error:
+            raise ValueError(f"Error extracting features for file: {path}. Error details: {str(feature_error)}")
+
+        # Data with background noise
+        noise_data = add_background_noise(normalized_data, background_noise_path)
+        res2 = extract_features(noise_data, sample_rate)
+        features_list.append(res2)
+
+        # Data with stretching and pitching
+        new_data = stretch(normalized_data)
+        data_stretch_pitch = pitch(new_data, sample_rate)
+        res3 = extract_features(data_stretch_pitch, sample_rate)
+        features_list.append(res3)
+
+        # Data with shifting
+        shift_data = shift(normalized_data)
+        res4 = extract_features(shift_data, sample_rate)
+        features_list.append(res4)
+
+        # Data with echo
+        echo_data = add_echo(normalized_data, sample_rate)  # Adjust the echo parameters as needed
+        res5 = extract_features(echo_data, sample_rate)
+        features_list.append(res5)
+
+        # Data with reverb after echo
+        reverb_after_echo_data = add_reverb(echo_data, sample_rate, delay_factor=0.5, decay=0.5)
+        res6 = extract_features(reverb_after_echo_data, sample_rate)
+        features_list.append(res6)
+
+        return np.vstack(features_list)
+
+    except Exception as e:
+        print(f"Error processing file: {path}")
+        print(f"Error details: {str(e)}")
+        return None
+```
+
+
+
 
 # Neural Network Ensemble Architecture
 
