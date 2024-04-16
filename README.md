@@ -225,21 +225,31 @@ model5 = create_and_compile_model(input_layer, output_layer_5)
 ## Results - Confusions Matrices
 
 **Model 1: CNN, LSTM, GRU with Attention** 
+
 ![Stretch](./images_ser/conf1.png)
 
+---
 
 **Model 2: CNN Only**
+
 ![Stretch](./images_ser/conf2.png)
 
+---
 
 **Model 3: CNN and LSTM**
+
 ![Stretch](./images_ser/conf3.png)
 
+---
 
 **Model 4: CNN and GRU**
+
 ![Stretch](./images_ser/conf4.png)
 
+---
+
 **Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
+
 ![Stretch](./images_ser/conf5.png)
 
 
