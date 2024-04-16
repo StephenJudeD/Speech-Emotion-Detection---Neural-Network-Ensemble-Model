@@ -18,11 +18,15 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 
 ![Trump Radar Chart](./images_ser/Trump_debate1.png)
 
+* Trump Cut (using online tool) [Trump Segment Used for Analysis](./soundfiles/trump_cut.wav)
+
 ---
 
 **Biden Radar Chart**
 
 ![Biden Radar Chart](./images_ser/biden_debate_1.png)
+
+* Biden Cut [Biden Segment Used for Analysis](./soundfiles/biden_cut.wav)
 
 Radar charts offer a valuable method for visually representing the emotional content conveyed during debates. They suggest that both Trump and Biden displayed negative emotions, but Trump's disgust was more noticeable. This finding aligns with previous studies on political communication, indicating that voters tend to be influenced more by negative emotions than positive ones.
 
@@ -326,9 +330,9 @@ In the next experiment, predictions are made on the surprise emotion only. These
 
 Window and hop sizes are crucial for examining variable length audio, with the intgeration of attention mechanisms in the models, this allows you to uses various levels of paremeters depedning on the granualrity/ dept / level of emtions you want to extract.
 
-●	Window size: The window size determines how long each segment of audio is analysed for emotion. A larger window size provides information for analysis but comes with increased computational complexity.
-●	Hop size: The hop size determines the overlap between windows. A smaller hop size means windows, which can enhance prediction accuracy by providing a smoother representation of the audio signal.
-●	Confidence threshold: The confidence threshold sets a level at which predictions are considered valid. A higher confidence threshold filters out predictions but may also result in missing some true positive emotions.
+* Window size: The window size determines how long each segment of audio is analysed for emotion. A larger window size provides information for analysis but comes with increased computational complexity.
+* Hop size: The hop size determines the overlap between windows. A smaller hop size means windows, which can enhance prediction accuracy by providing a smoother representation of the audio signal.
+* Confidence threshold: The confidence threshold sets a level at which predictions are considered valid. A higher confidence threshold filters out predictions but may also result in missing some true positive emotions.
 
 ```python
 # Function for consistent audio preprocessing
