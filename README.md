@@ -403,7 +403,7 @@ In the next experiment, predictions are made on the surprise emotion only. These
 
 ---
 
-## Window & hopw sizes for variable lenghts - NB!!
+## Window & hop sizes for variable lenghts - NB!!
 
 Window and hop sizes are crucial for examining variable length audio, with the intgeration of attention mechanisms in the models, this allows you to uses various levels of paremeters depedning on the granualrity/ dept / level of emtions you want to extract.
 
@@ -459,28 +459,26 @@ Johnny Cash’s haunting ballad, originally by Nine Inch Nails, transformed into
 
 [![Video](https://img.youtube.com/vi/xDdTKBphRMs/0.jpg)](https://www.youtube.com/watch?v=xDdTKBphRMs)
 
-**Radar Chart with Emtions**
+**Radar Chart with Emotions**
 
 ![Stretch](./images_ser/trump_vs_media.png)
 
 
 ---
 
-## 1st Debate
-
-
 
 ## How to Run
 
-1. **Set up environment:** (List dependencies, Python version, etc.)
-2. **Download datasets:** (If applicable, provide download instructions)
-3. **Execute ensemble_full_final:** (Explain any arguments or parameters required)
-4. **Run Predictor_final:** (Explain any arguments or parameters required)
+* loading_feature_augmentations_models.ipynb - this contains all te loading, augmentating, feature extractions, model preparation & building, evalusaitons etc
+
+* ensmble_predictions.ipynb - loading all the models as pickle files, creating ensemble, testing on real world scenarios
 
 ## Future Work
 
-* (List potential areas for improvement or expansion)
+Future enhancements for the SER model include incorporating a diverse range of datasets to improve training data, testing the model in challenging scenarios to enhance resilience, and exploring emotional states and communication dynamics in human-to-human interactions. Challenges such as limited datasets and the complex nature of emotions should be addressed to ensure the continual advancement of the SER model. Collaborative efforts and state-of-the-art technologies should be prioritized for future research in this field.
 
 ## Contact
 
-* (Provide your contact information for questions or feedback) 
+Any quesiotns or comments
+
+* stephenjudedon2@gmail.com
