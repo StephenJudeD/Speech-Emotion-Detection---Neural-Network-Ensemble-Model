@@ -267,6 +267,11 @@ model5 = create_and_compile_model(input_layer, output_layer_5)
 
 ## Ensemble Model - Majority voting
 
+* Individual Model Predictions: Each model in the ensemble independently, and then processes the input data and provides its prediction for the target variable, therefore each model gets a vote.
+* Majority Vote: The final prediction is determined by a majority vote among each model. The emotion that receives the most votes will become final prediction. 
+* If the final vote is tied, then the code will randomly select one of the tied classes as the final prediction, to counteract this issue a confidence threshold will be introduced.
+
+
 ```python
 # Function for majority voting
 def majority_vote(predictions):
@@ -298,12 +303,37 @@ for path in ensemble_paths:
     ensemble_models.append(model)
 
 ```
-## Testing for Genarlisation
+# Testing on Real World Data
 
-* Cross Corpora
-* Music
-* Trump vs The Media 
-* 1st Debate
+To ensure transparency and research integrity, it is crucial that the data is treated identically to the model building phase, with the same features extracted and the same standardisation techniques applied, such as using the same sample rate.
+
+## Cross Corpora
+Cross-Corpora testing, in the context of SER systems, entails training a model on multiple datasets and then evaluating it on a separate dataset, in this instance, the TESS dataset. The TESS dataset offers the advantage of including an emotion, Surprise, not used in the model, which will be assessed after predicting the six emotions included in the model.
+
+**Confusion Matrix for Cross Corpora - Excluding Surprise** 
+
+![Stretch](./images_ser/cross_corpora.png)
+
+**Bar Chart for Cross Corpora - Surprise only**
+
+In the next experiment, predictions are made on the surprise emotion only. These predictions may be inaccurate, but they provide valuable insights into the model’s ability to generalise. The model most frequently predicts happiness for surprise samples. This is followed by disgust. When considering emotions that are perceived to be similar to surprise, these predictions align with our intuition.
+
+![Stretch](./images_ser/tess_surprise.png)
+
+
+
+
+---
+  
+## Music
+
+---
+
+## Trump vs The Media 
+
+---
+
+## 1st Debate
 
 
 
