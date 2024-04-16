@@ -71,7 +71,7 @@ Radar charts offer a valuable method for visually representing the emotional con
 
 
 
-**Preprocessing:**
+**Model Preparation:**
 * **Loading and Resampling:** Loads audio files and resamples them to a consistent sample rate. 
 * **Silence Trimming:** Removes leading and trailing silence from the audio.
 * **Normalization:** Adjusts audio amplitude to a standard range.
@@ -103,7 +103,13 @@ This project utilizes an ensemble of neural networks for enhanced performance an
 * Utilizes bidirectional LSTM and GRU layers for capturing information from both past and future contexts.
 * Employs multi-head attention to focus on various aspects of 
 
-
+```python
+# Your Python code here
+def hello_world():
+    print("Hello, world!")
+    
+hello_world()
+```
 
 ## Results
 
