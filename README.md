@@ -11,15 +11,14 @@ This project explores the development of a neural network ensemble model for eff
 The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1st Debate Part 2 (2020), hosted on rev.com and specifically the final segment. This section of the debate was used as they are both addressed the same question, both given the same amount of time by the host to answer, two minutes, and therefore this can be considered a clean comparison. For this reason, we do not see the ‘Anger’ spike noted and discussed widely from this debate, at no time do they interpret each other during this segment. 
 
 * Trump Cut (using online tool) [Trump Segment Used for Analysis](./soundfiles/trump_cut.wav)
-* Biden Cut [Biden Segment Used for Analysis](./soundfiles/biden_cut.wav)
-
-* window_size = 1.0
-* hop_size = 0.2
-* confidence_threshold =0.7
+* Biden Cut (using online tool) [Biden Segment Used for Analysis](./soundfiles/biden_cut.wav)
 
 **Trump Radar Chart**
 
 ![Trump Radar Chart](./images_ser/Trump_debate1.png)
+
+---
+
 
 **Trump Bar Chart**
 
@@ -30,6 +29,9 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 **Biden Radar Chart**
 
 ![Biden Radar Chart](./images_ser/biden_debate_1.png)
+
+---
+
 
 **Biden Bar Chart**
 
