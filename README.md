@@ -4,6 +4,23 @@
 
 This project explores the development of a neural network ensemble model for effective speech emotion detection. Speech emotion detection has important applications in areas such as human-computer interaction, mental health analysis, and customer service.
 
+## Key Result - 1st Debate Biden & Trump - Final Segment
+
+The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1st Debate Part 2 (2020), hosted on rev.com and specifically the final segment. In order to fully explore this piece, the transcript has been added for context. This will be divided into two sections, firstly the transcript with both pieces, then visualisation by visualisation to compare both, and finally discuss the observations and compare. The segments were cut and converted using an editing tool, Figure 56 displays the two files used for this test. Both tested using the same parameters.
+•	window_size = 1.0
+•	hop_size = 0.2
+•	confidence_threshold =0.7
+
+
+![Trump Radar Chart](./images_ser/Trump_debate1.png)
+![Biden Radar Chart](./images_ser/biden_debate_1.png)
+
+
+Radar charts offer a valuable method for visually representing the emotional content conveyed during debates. They suggest that both Trump and Biden displayed negative emotions, but Trump's disgust was more noticeable. This finding aligns with previous studies on political communication, indicating that voters tend to be influenced more by negative emotions than positive ones.
+
+
+
+
 ## Process Flow
 
 * **Process Flow Diagram:**
