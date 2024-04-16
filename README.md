@@ -222,12 +222,26 @@ output_layer_5 = Dense(units=6, activation='softmax')(attention_flatten_5)
 model5 = create_and_compile_model(input_layer, output_layer_5)
 ```
 
-## Results
+## Results - Confusions Matrices
 
-* Summarize performance metrics
+**Model 1: CNN, LSTM, GRU with Attention** 
+![Stretch](./images_ser/conf1.jpg)
 
 
-* Discuss key findings from cross-corpora testing.
+**Model 2: CNN Only**
+![Stretch](./images_ser/conf2.jpg)
+
+
+**Model 3: CNN and LSTM**
+![Stretch](./images_ser/conf3.jpg)
+
+
+**Model 4: CNN and GRU**
+![Stretch](./images_ser/conf4.jpg)
+
+**Model 5: CNN, Bidirectional LSTM, Bidirectional GRU with Multi-Head Attention**
+![Stretch](./images_ser/conf5.jpg)
+
 
 ## Code Structure
 
