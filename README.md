@@ -10,6 +10,9 @@ This project explores the development of a neural network ensemble model for eff
 
 The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1st Debate Part 2 (2020), hosted on rev.com and specifically the final segment. This section of the debate was used as they are both addressed the same question, both given the same amount of time by the host to answer, two minutes, and therefore this can be considered a clean comparison. For this reason, we do not see the ‘Anger’ spike noted and discussed widely from this debate, at no time do they interpret each other during this segment. 
 
+* Trump Cut (using online tool) [Trump Segment Used for Analysis](./soundfiles/trump_cut.wav)
+* Biden Cut [Biden Segment Used for Analysis](./soundfiles/biden_cut.wav)
+
 * window_size = 1.0
 * hop_size = 0.2
 * confidence_threshold =0.7
@@ -18,7 +21,9 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 
 ![Trump Radar Chart](./images_ser/Trump_debate1.png)
 
-* Trump Cut (using online tool) [Trump Segment Used for Analysis](./soundfiles/trump_cut.wav)
+**Trump Bar Chart**
+
+![Trump Radar Chart](./images_ser/trump_bar.png)
 
 ---
 
@@ -26,9 +31,13 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 
 ![Biden Radar Chart](./images_ser/biden_debate_1.png)
 
-* Biden Cut [Biden Segment Used for Analysis](./soundfiles/biden_cut.wav)
+**Biden Bar Chart**
+
+![Trump Radar Chart](./images_ser/biden_bar.png)
 
 Radar charts offer a valuable method for visually representing the emotional content conveyed during debates. They suggest that both Trump and Biden displayed negative emotions, but Trump's disgust was more noticeable. This finding aligns with previous studies on political communication, indicating that voters tend to be influenced more by negative emotions than positive ones.
+
+The use of fear and sadness in political discussions is nothing new. Politicians have been employing these emotions for centuries to convince and energize their supporters. However, the frequency with which these emotions are utilised has changed over time. In recent years, there has been a shift towards a more negative and fear driven approach in political messaging. This may be influenced by various factors, including the rise of social media, the fragmentation of media platforms and the increasing importance of partisan identity. Regardless of the reasons, it is likely that fear and sadness will continue to play a role in political discourse since negativity tends to be more effective than positivity in most aspects of life, especially in politics.
 
 
 ## Datasets
@@ -469,12 +478,6 @@ Johnny Cash’s haunting ballad, originally by Nine Inch Nails, transformed into
 ## 1st Debate
 
 
-
-
-
-
-* **ensemble_full_final:** (Explain the purpose of this file)
-* **Predictor_final:** (Describe the functionality of this file)
 
 ## How to Run
 
