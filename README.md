@@ -6,7 +6,7 @@ This project explores the development of a neural network ensemble model for eff
 
 ## Key Result - 1st Debate Biden & Trump - Final Segment
 
-The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1st Debate Part 2 (2020), hosted on rev.com and specifically the final segment. 
+The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1st Debate Part 2 (2020), hosted on rev.com and specifically the final segment. This section of the debate was used as they are both addressed the same question, both given the same amount of time by the host to answer, two minutes, and therefore this can be considered a clean comparison. For this reason, we do not see the ‘Anger’ spike noted and discussed widely from this debate, at no time do they interpret each other during this segment. 
 
 * window_size = 1.0
 * hop_size = 0.2
