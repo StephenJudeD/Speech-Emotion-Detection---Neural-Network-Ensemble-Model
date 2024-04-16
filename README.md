@@ -11,8 +11,10 @@ The key result is based on a video and transcript 2020 Joe Biden Donald Trump 1s
 •	hop_size = 0.2
 •	confidence_threshold =0.7
 
-
+**Trump Radar Chart**
 ![Trump Radar Chart](./images_ser/Trump_debate1.png)
+
+**Biden Radar Chart**
 ![Biden Radar Chart](./images_ser/biden_debate_1.png)
 
 
@@ -23,7 +25,7 @@ Radar charts offer a valuable method for visually representing the emotional con
 
 ## Process Flow
 
-* **Process Flow Diagram:**
+**Process Flow Diagram:**
 
 ![Process Flow Diagram](./images_ser/pres_data_flow_ensemble.jpg)
 
