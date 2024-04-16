@@ -321,20 +321,64 @@ In the next experiment, predictions are made on the surprise emotion only. These
 ![Stretch](./images_ser/tess_surprise.png)
 
 ---
-  
+
+## Window & hopw sizes for variable lenghts - NB!!
+
+Window and hop sizes are crucial for examining variable length audio, with the intgeration of attention mechanisms in the models, this allows you to uses various levels of paremeters depedning on the granualrity/ dept / level of emtions you want to extract.
+
+●	Window size: The window size determines how long each segment of audio is analysed for emotion. A larger window size provides information for analysis but comes with increased computational complexity.
+●	Hop size: The hop size determines the overlap between windows. A smaller hop size means windows, which can enhance prediction accuracy by providing a smoother representation of the audio signal.
+●	Confidence threshold: The confidence threshold sets a level at which predictions are considered valid. A higher confidence threshold filters out predictions but may also result in missing some true positive emotions.
+
+```python
+# Function for consistent audio preprocessing
+def preprocess_long_audio(audio_file_path, target_sr=16000, window_size=None, hop_size=None):
+    if window_size is None or hop_size is None:
+        raise ValueError("Both window_size and hop_size must be provided.")
+    data, sr = librosa.load(audio_file_path, sr=target_sr, duration=None)
+
+    # Trim silences
+    trimmed_data = trim_silences(data, sr)
+
+    # Normalize the audio
+    normalized_data = normalize_audio(trimmed_data)
+
+    # Calculate parameters for sliding windows
+    window_samples = int(window_size * target_sr)
+    hop_samples = int(hop_size * target_sr)
+
+    # Extract sliding windows
+    windows = [normalized_data[i:i + window_samples] for i in range(0, len(normalized_data) - window_samples + 1, hop_samples)]
+
+    # Print processed information
+    print(f"Original Duration: {len(trimmed_data) / sr:.2f} seconds")
+    print(f"Number of Windows: {len(windows)}")
+
+    return windows, sr
+```
+
+
 ## Music - Johnny Cash 'Hurt'
+
+**Video - hosted on youtube**
 
 [![Video](https://img.youtube.com/vi/8AHCfZTRGiI/0.jpg)](https://www.youtube.com/watch?v=8AHCfZTRGiI)
 
 Johnny Cash’s haunting ballad, originally by Nine Inch Nails, transformed into an anthem of loss and regret. Despite its melancholy, the song offers self-awareness and acceptance. Happiness is an emotion predicted by the model, outwardly this could be interpreted as incorrect, but if you listen to the songs message of self-awareness and introspection, this can be interpreted as a form of growth. The song acknowledges the inevitability of pain and suffering in life, but it also suggests a quiet acceptance of these realities. In this sense, happiness can be found in the peace surrendering and the absence of denial. Cash released it in 2002, passing away 13 months later
 
+**Bar Chart with Emtions**
+
 ![Stretch](./images_ser/cash_hurt.png)
 
 ---
 
-## Trump vs The Media 
+## Trump vs The Media
 
-[![Video](https://img.youtube.com/vi/8AHCfZTRGiI/0.jpg)](https://www.youtube.com/watch?v=xDdTKBphRMs)
+**Video - hosted on youtube**
+
+[![Video](https://img.youtube.com/vi/xDdTKBphRMs/0.jpg)](https://www.youtube.com/watch?v=xDdTKBphRMs)
+
+**Radar Chart with Emtions**
 
 ![Stretch](./images_ser/trump_vs_media.png)
 
