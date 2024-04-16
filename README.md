@@ -78,7 +78,7 @@ Radar charts offer a valuable method for visually representing the emotional con
 
 # Neural Network Ensemble Architecture
 
-This project utilizes an ensemble of neural networks for enhanced performance and robustness. The ensemble includes the following models:
+This project utilizes an ensemble of neural networks for enhanced performance and robustness. By leveraging the strengths and diversity of these models, the ensemble approach aims to achieve better generalisation on the data. Each model has shown proficiency in capturing and classifying specific emotions, which enhances the overall ensemble's ability to handle a wide range of emotional states. The varying performances of the models on different emotions indicate their complementary nature as individual components of the ensemble.The ensemble includes the following models:
 
 **Model 1: CNN, LSTM, GRU with Attention** 
 * Employs a Convolutional Neural Network (CNN) for feature extraction.
