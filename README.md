@@ -65,6 +65,9 @@ Radar charts offer a valuable method for visually representing the emotional con
 
 
 **Feature Extraction:** 
+
+The extracted features are stacked in sequential order, with MFCCs as the first feature. This stacking ensures that the extracted features are presented in a consistent format, facilitating their subsequent use in emotion classification models. MFCC's being the most widely utilised along with Mel Spectograms in SER Studies, with food reason, through expirmntions you will see that they garner the best results. Feature extraction techniques like MFCCs allowed the model to capture subtle variations in voice pitch, tone, and rhythm – all vital cues for recognizing emotions. 
+
 * **MFCCs (Mel-Frequency Cepstral Coefficients):** Capture the shape of the vocal tract, commonly used in speech recognition and other audio tasks.
 * **Delta MFCCs:** Measure the changes in MFCCs over time, providing dynamic information.
 * **Acceleration MFCCs:**  Calculate the second-order derivative of MFCCs, emphasizing higher-order spectral changes.
