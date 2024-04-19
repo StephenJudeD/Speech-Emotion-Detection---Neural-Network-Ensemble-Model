@@ -1,5 +1,7 @@
 # Speech Emotion Detection - Neural Network Ensemble Model
 
+## Deep Learning Ensemble Model using CNN/LSTM/GRU/ Self-Attention & Multi-head Attention laters
+
 ## Introduction
 
 This project explores the development of a neural network ensemble model for effective speech emotion detection. By utilising diverse datasets, employing advanced feature extraction techniques, and developing robust a machine learning model, SER system capable of identifying and classifying a wide range of emotions has been usccessfully dveloped. The ultimate goal was to develop a Sentiment Emotion Recognition (SER) system for analyzing political discourse. This involved iterative testing until finally applying it to the 1st debate between Trump and Biden.
