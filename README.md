@@ -1,6 +1,6 @@
 # Speech Emotion Detection - Neural Network Ensemble Model
 
-## Deep Learning Ensemble Model using CNN/LSTM/GRU/ Self-Attention & Multi-head Attention laters
+## Deep Learning Ensemble Model using CNN/LSTM/GRU/ Self-Attention & Multi-head Attention layers
 
 ## Introduction
 
