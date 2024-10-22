@@ -1,0 +1,43 @@
+from flask import Flask, request, jsonify
+import librosa
+import joblib
+import soundfile as sf
+
+app = Flask(__name__)
+
+# Load your emotion prediction model here
+emotion_model = joblib.load('path_to_your_model.pkl')
+
+@app.route('/predict-emotion', methods=['POST'])
+def predict_emotion():
+    if 'audio' not in request.files:
+        return "No audio file uploaded", 400
+
+    audio_file = request.files['audio']
+    audio_file.save("user_audio.wav")
+
+    # Process the audio and extract features
+    audio, sr = librosa.load("user_audio.wav")
+    features = extract_features(audio, sr)  # Implement feature extraction based on your model
+
+    # Predict the emotion
+    predicted_emotion = emotion_model.predict(features)
+
+    # Integrate LLM for explanation (using OpenAI API)
+    explanation = generate_explanation(predicted_emotion)
+
+    return jsonify({
+        "emotion": predicted_emotion,
+        "explanation": explanation
+    })
+
+def extract_features(audio, sr):
+    # Feature extraction code here
+    pass
+
+def generate_explanation(emotion):
+    # Use OpenAI API to get an explanation
+    pass
+
+if __name__ == '__main__':
+    app.run(debug=True)
